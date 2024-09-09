@@ -1,7 +1,13 @@
 #!/bin/sh
-
+# обновляем файлы с GH
+git pull origin
+git fetch --all
+git reset --hard origin/main
 # Собираем Docker-образ
 sudo docker build -t repost-ninja-bot .
+# Удаляем старый контейнер
+docker stop RepostNinjaBot
+docker rm RepostNinjaBot
 # Запускаем контейнер
 docker run -d \
  --name RepostNinjaBot \
