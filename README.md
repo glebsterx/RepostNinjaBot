@@ -20,3 +20,10 @@ sudo ./install.sh YOUR_BOT_TOKEN
  - API_TOKEN -- (string) your bot token
  - SILENT_MODE -- (bool) silent mode switch
  - REPOST_ANSWER -- (string) answer to any reposted message
+
+## Серверы (прод / тест)
+
+_Обновлено 2026-09-20. Общая схема — `/data/homelab/docs/naming-convention.md`._
+
+- **Прод:** LXC `apps-home-01` (192.168.0.11, `ssh apps`, код в `/data/RepostNinjaBot`) — целевой, сейчас нигде не запущен
+- **Тест/dev:** LXC `apps-dev-home-01` (192.168.0.18, `ssh apps-dev`, VMID 207 на pve-home-02) — целевой
